@@ -1,6 +1,19 @@
-function indexOfIgnoreCase(s1, s2) {
-  // write your code here
+function indexOfIgnoreCase(str: string, subStr: string): number {
+    if (!str || !subStr) {
+        return -1;
+    }
+
+    const lowerCaseStr = str.toLowerCase();
+    const lowerCaseSubStr = subStr.toLowerCase();
+
+    return lowerCaseStr.indexOf(lowerCaseSubStr);
 }
+
+// Examples
+console.log(indexOfIgnoreCase("Hello World", "world")); // Output: 6
+console.log(indexOfIgnoreCase("apple", "Ple")); // Output: 2
+console.log(indexOfIgnoreCase("test", "aaa")); // Output: -1
+
 
 // Please do not change the code below
 const s1 = prompt("Enter s1:");
